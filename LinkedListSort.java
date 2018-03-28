@@ -1,36 +1,4 @@
-package com.code.linkedlist;
-
-
-public class LinkedListSort
-{
-	public static void main(String[] args) {
-		LinkedListFunctions llf = new LinkedListFunctions();
-		Node head=null;
-		
-/*	//	for (int i = 0; i < 5; i++)
-			head = llf.InsertAtEnd(head, 0);
-			head = llf.InsertAtEnd(head, 2);
-			head = llf.InsertAtEnd(head, 1);
-			head = llf.InsertAtEnd(head, 0); */
-			head = llf.InsertAtEnd(head, 1);
-		llf.printList(head);
-		GFG g=new GFG();
-		g.linksort(head);
-		llf.printList(head);
-	}
-}
-
-
-
-/*
-Please note that it's Function problem i.e.
-you need to write your solution in the form of Function(s) only.
-Driver Code to call/invoke your function would be added by GfG's Online Judge.*/
-
-/*
-  Sort the list of 0's,1's and 2's
-  The input list will have at least one element  
-  Node is defined as  */
+/* For problem statement, please refer :  https://practice.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1 */
 class Node {
 	int value;
 	Node next;
