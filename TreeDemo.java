@@ -1,45 +1,97 @@
-package com.Trees;
-class BTNode{
+class BTNode {
+
+
+
 	int data;
+
 	BTNode left;
+
 	BTNode right;
-	BTNode(int data)
-	{
-		this.data=data;
+
+
+
+	BTNode(int data) {
+
+		this.data = data;
+
 	}
+
 }
-public class TreeDemo {
-public static void main(String[] args) {
-	BTNode root=null;
-	int[] input={4,5,2,3,7,8};
-	int j=0;
-	String pos="";
-	BTNode head=root;
-	while(j<input.length)
-	{
-		if(root==null)
-		{
-			root=new BTNode(input[j]);
-			System.out.println("data inserted at "+j+"th input is "+input[j]+" at pos = "+ pos);
-			j++;
+
+
+
+public class TreeDemo2 {
+
+
+
+	public static void main(String[] args) {
+
+
+
+		BTNode root = null;
+
+
+
+		int[] input = { 4, 5, 2, 3, 7, 8 };
+
+
+
+		int j = 0;
+
+
+
+		root = new BTNode(input[0]); // root node created .
+
+		BTNode temp = root;
+
+		for (int i = 1; i < input.length; ) {
+
+			if (temp.data > input[i])
+
+			// right
+
+			{
+
+				if (temp.left == null)
+
+				{
+
+					temp.left = new BTNode(input[i]);
+
+					i++;
+
+				}
+
+
+
+				temp = temp.left;
+
+
+
+			} else if (temp.data < input[i]) {
+
+				if (temp.right == null)
+
+				{
+
+					temp.right = new BTNode(input[i]);
+
+					i++;
+
+				}
+
+				else 
+
+				temp = temp.right;
+
+
+
+			}
+
 		}
-		else if(root.data>input[j])
-		{
-			if(root.left==null)
-				root.left=new BTNode(input[j]);
-			else 
-			root=root.left;
-			pos="left";
-		}
-		else if(root.data<input[j])
-		{
-			if(root.right==null)
-				root.right=new BTNode(input[j]);
-			else 
-				root=root.right;
-			pos="right";
-		}
+
 	}
-	
-}
+
+
+
 }
