@@ -9,7 +9,7 @@ class BTNode {
 	}
 }
 
-public class TreeDemo2 {
+public class InsertionBSTIterative {
 
 	public static void main(String[] args) {
 
