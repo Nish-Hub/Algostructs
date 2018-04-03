@@ -11,6 +11,7 @@ As you will see in the index , head is more better here as tail includes additio
 
 Here we have a pattern i.e for a multiplication of number and multiple , answer is straightforward , here we divide our work into these units
 */
+//To see the code in action :  https://goo.gl/RrrXmA
 
 public class Multiple10Recursive {
 public static void main(String[] args) {
