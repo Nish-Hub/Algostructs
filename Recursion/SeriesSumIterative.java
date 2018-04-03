@@ -1,4 +1,8 @@
-package com.code.recursion;
+/*
+Problem Statement : https://www.hackerrank.com/challenges/java-loops/problem
+This is a simple iterative problem which is a bit hard to do with recursion . The key to learn here was passing "sum" down the function
+calls and then processing it . This is tail recursion.
+*/
 
 import java.util.*;
 import java.io.*;
@@ -11,21 +15,22 @@ public class SeriesSumIterative{
             int a = in.nextInt();
             int b = in.nextInt();
             int n = in.nextInt();
-            findSumHeadRecurDispatcher(a,b,n,0,a);
+            findSumTailRecurDispatcher(a,b,n,0,a);
             System.out.println();
         }
         
         in.close();
     }
-      static void findSumHeadRecurDispatcher(int a,int b,int n,int i,int sum)
+      static void findSumTailRecurDispatcher(int a,int b,int n,int i,int sum)
     {
     	if(i==n)
     		return;
     	sum+=(1<<i)*b;
      	System.out.print(sum+" ");
-    	findSumHeadRecurDispatcher(a,b,n,i+1,sum);
+    	findSumTailRecurDispatcher(a,b,n,i+1,sum);
     }
-    static int findSumHeadRecurDispatcher2(int a,int b,int n,int i,int sum)
+// below functions are not used but they were used to reach this code . So you must have an idea as to how this end product was made	
+    static int findSumTailRecurDispatcher2(int a,int b,int n,int i,int sum) 
     {
     	
       	sum+=(1<<i)*b;
