@@ -9,6 +9,8 @@ index 0 with index size-1 .
 index 1 with index size-2 
 and so on ... so imagine we break the array in the middle and put the index size-1 box on the index 0 and similarly for others. 
 Now this first pair of index size-1,0 says to other pairs that you guys tell us whats your value and we will sort ourselves
+
+For output : Please refer : https://goo.gl/DwzUzW
  */
 public class ArrayPallindrome {
 public static void main(String[] args) {
