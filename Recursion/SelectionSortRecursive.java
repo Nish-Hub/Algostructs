@@ -1,4 +1,3 @@
-package com.code.recursion;
 
 /*
 Selection sort technique using recursive approach 
@@ -13,6 +12,9 @@ the first index says , i will only worry about getting the sorted element for me
 and i dont care how. 
 
 So your data size is size of array with a slight change of perspective 
+
+Point to note : Here we are passing the array as a reference and we are not changing its reference's address anywhere so we dont 
+need to record the return values . 
 
  For output :  https://goo.gl/VpJLKy
  */
