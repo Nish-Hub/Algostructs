@@ -10,6 +10,9 @@ The point of confusion here when u look at the code is : the recursive function 
 The 2nd point is missing here and is merged with the base case. Note here the parameters are the one doing the processing part . 
 The first variable i.e x is reducing itself and at the same time multiplying its value and making the second parameter i.e x*1 . 
 So at the last function copy call we get x*x-1*x-2*...*1 . 
+
+Point to learn here : The parameters can be used to process the inputs and be returned at the end as an output . Note we are not actually 
+dealing with the intermediate returns . We are only using the final return . 
 */
 public class FactorialRecursive {
     public static void main(String[] args) {
