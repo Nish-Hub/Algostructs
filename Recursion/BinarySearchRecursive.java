@@ -12,9 +12,6 @@ if the element is in the mid , we return the result, else we recursively/iterati
 Now the benefit here is again , you need to parameterise the iterative method with arr,k,low,high .
 mid is calculated inside so we need not to send this . Hence we need a helper function here . 
 */
-// THIS CODE IS NOT WORKING . RETURNS A WRONG VALUE : FIND THE ERROR !!! 
-/*
-*/
 int findingIdx(int arr[], int k) {
     // TODO:  Return Index of unique element
   int l=0,h=arr.length-1;
