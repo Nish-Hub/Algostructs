@@ -1,0 +1,47 @@
+/*
+Problem Statement : https://practice.geeksforgeeks.org/problems/the-invariable-units-digit/0/?ref=self
+
+Points to learn : The best part of this problem was identifying the pattern like to multiply say 2 numbers , n1= 1232342223 and n2=322313
+, if someone says , give me the unit digit of n1 * n2, u dont have to multiply whole of n1,n2 but just unit digits of n1,n2 .
+
+Second was the data size is huge so this gives u a hint that they want u to use some efficient method but still start with a lame approach
+and think of optimization later.
+
+Third was : reading huge numbers using string as nextint and nextlong fails 
+*/
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class InvariantUnitDigit {
+	public static void main (String[] args) {
+        // code
+		 Scanner sc=new Scanner(System.in);
+		int t =sc.nextInt();
+		for (int i = 0; i < t; i++) {
+		    String num =sc.next();
+			int p=sc.nextInt();
+			int unit=Integer.parseInt(num.substring(num.length()-1,num.length()));
+			System.out.println(isUnitDigitSame(p,unit,unit));
+		}
+	}
+	static int isUnitDigitSame(int p,int unit,int num)
+	{
+	 if(p == 1)
+	 {
+	     if(unit!=num)
+	        return 0;
+	     else
+	        return 1;
+	 }
+	    //extracting only the last digit which will give
+	    //me the same unit digit if i had multiplied the whole number .
+	    unit=(unit*num)%10;
+
+	    
+	    return isUnitDigitSame(p-1,unit,num);
+	    
+	    
+	}
+}
