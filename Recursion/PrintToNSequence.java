@@ -1,6 +1,4 @@
 /*Print 1 To N Ascending
-(author: Sandeep)
-[Score: 10]
 Given a positive number N, write a function to
 1>  print 1 to N (space-separated) using Recursion.
 		the dataset can be reduced to : print 1 and rest print 2 to N i.e start from larger
